@@ -5,6 +5,8 @@ import pages.BasePageObject;
 
 public class HubungkanMarketplaceForm extends BasePageObject {
     public void clickTambahMarketplaces (){
+        waitABit(2);
+        hover(By.cssSelector(".justify-content-center"));
         click(By.cssSelector(".justify-content-center"));
     }
 

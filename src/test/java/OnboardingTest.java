@@ -60,7 +60,6 @@ public class OnboardingTest {
         hubungkanMarketplaceForm.clickMasterData();
         onboardingPage.clickSelanjutnya();
 
-
         //Data Barang
         dataBarangForm.selectQuestionOne(false);
         dataBarangForm.selectQuestionsTwo(true);
