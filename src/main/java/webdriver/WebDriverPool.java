@@ -8,6 +8,7 @@ public class WebDriverPool {
     public static void  initializeWebDriver(){
         WebDriverManager.chromedriver().setup();
         chromeDriver = new ChromeDriver();
+        chromeDriver.manage().window().maximize();
     }
     public static void quitWebDriver(){
         chromeDriver.quit();

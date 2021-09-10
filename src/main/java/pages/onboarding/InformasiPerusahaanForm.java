@@ -53,8 +53,4 @@ public class InformasiPerusahaanForm extends BasePageObject {
     public void inputFax(String fax) {
         typeWithBackSpace(By.xpath("//input[@name='fax']"), fax);
     }
-
-    public void clickSelanjutnya() {
-        click(By.xpath("//button[contains(text(),'Next')]"));
-    }
 }

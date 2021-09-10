@@ -5,8 +5,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
+import pages.onboarding.DataBarangForm;
 import pages.onboarding.HubungkanMarketplaceForm;
 import pages.onboarding.InformasiPerusahaanForm;
+import pages.onboarding.OnboardingPage;
 import webdriver.WebDriverPool;
 
 public class OnboardingTest {
@@ -14,6 +16,8 @@ public class OnboardingTest {
     private InformasiPerusahaanForm informasiPerusahaanForm = new InformasiPerusahaanForm();
     private LoginPage loginPage = new LoginPage();
     private HubungkanMarketplaceForm hubungkanMarketplaceForm = new HubungkanMarketplaceForm();
+    private DataBarangForm dataBarangForm = new DataBarangForm();
+    private OnboardingPage onboardingPage = new OnboardingPage();
 
     @BeforeEach
     public void initialize() {
@@ -45,15 +49,24 @@ public class OnboardingTest {
         informasiPerusahaanForm.inputNomorTelepon("082293957899");
         informasiPerusahaanForm.inputEmailPerusahaan("melda@vhiweb.com");
         informasiPerusahaanForm.inputFax("22212");
-        informasiPerusahaanForm.clickSelanjutnya();
+        onboardingPage.clickSelanjutnya();
 
         //hubungkan marketplacese
+        hubungkanMarketplaceForm.clickTambahMarketplaces();
         hubungkanMarketplaceForm.inputPlatform("Tokopedia");
         hubungkanMarketplaceForm.inputNamaPedagang("melda");
         hubungkanMarketplaceForm.inputTautanToko("https://melda.com");
         hubungkanMarketplaceForm.clickTambahMarketplace();
+        hubungkanMarketplaceForm.clickMasterData();
+        onboardingPage.clickSelanjutnya();
+
 
         //Data Barang
+        dataBarangForm.selectQuestionOne(false);
+        dataBarangForm.selectQuestionsTwo(true);
+        dataBarangForm.selectQuestionThree(true);
+        dataBarangForm.selectQuestionFour(false);
+        dataBarangForm.inputSKU(1);
 
     }
 }

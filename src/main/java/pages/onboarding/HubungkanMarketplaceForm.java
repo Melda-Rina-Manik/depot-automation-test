@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import pages.BasePageObject;
 
 public class HubungkanMarketplaceForm extends BasePageObject {
+    public void clickTambahMarketplaces (){
+        click(By.cssSelector(".justify-content-center"));
+    }
+
     public void inputPlatform(String platform) {
         selectByVisibleText(By.id("platform"), platform);
     }
@@ -18,5 +22,9 @@ public class HubungkanMarketplaceForm extends BasePageObject {
 
     public void clickTambahMarketplace() {
         click(By.xpath("//button[contains(text(),'Tambah Marketplace')]"));
+    }
+
+    public void clickMasterData(){
+        click(By.cssSelector(".custom-radio"));
     }
 }

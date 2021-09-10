@@ -39,6 +39,7 @@ public class BasePageObject {
     //locator
     WebElement element = find(by);
     element.click();
+    element.sendKeys(Keys.DOWN);
     //looping sampai field kosong
     while (!element.getAttribute("value").isEmpty()) {
       element.sendKeys(Keys.BACK_SPACE);
