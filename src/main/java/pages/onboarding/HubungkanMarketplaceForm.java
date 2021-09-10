@@ -9,7 +9,7 @@ public class HubungkanMarketplaceForm extends BasePageObject {
     }
 
     public void inputNamaPedagang(String namapedagang) {
-        type(By.id("merchant_name"), namapedagang);
+        typeWithBackSpace(By.id("merchant_name"), namapedagang);
     }
 
     public void inputTautanToko(String tautantoko) {

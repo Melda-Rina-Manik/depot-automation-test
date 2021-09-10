@@ -1,3 +1,6 @@
+import static webdriver.WebDriverPool.initializeWebDriver;
+
+import java.io.File;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,11 +9,8 @@ import pages.onboarding.HubungkanMarketplaceForm;
 import pages.onboarding.InformasiPerusahaanForm;
 import webdriver.WebDriverPool;
 
-import java.io.File;
-
-import static webdriver.WebDriverPool.initializeWebDriver;
-
 public class OnboardingTest {
+
     private InformasiPerusahaanForm informasiPerusahaanForm = new InformasiPerusahaanForm();
     private LoginPage loginPage = new LoginPage();
     private HubungkanMarketplaceForm hubungkanMarketplaceForm = new HubungkanMarketplaceForm();
@@ -47,8 +47,7 @@ public class OnboardingTest {
         informasiPerusahaanForm.inputFax("22212");
         informasiPerusahaanForm.clickSelanjutnya();
 
-        //hubungkan marketplace
-
+        //hubungkan marketplacese
         hubungkanMarketplaceForm.inputPlatform("Tokopedia");
         hubungkanMarketplaceForm.inputNamaPedagang("melda");
         hubungkanMarketplaceForm.inputTautanToko("https://melda.com");

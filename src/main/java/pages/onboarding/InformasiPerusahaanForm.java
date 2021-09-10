@@ -11,15 +11,15 @@ public class InformasiPerusahaanForm extends BasePageObject {
     }
 
     public void inputNamaPerusahaan(String namaperusahaan) {
-        type(By.name("Nama"), namaperusahaan);
+        typeWithBackSpace(By.name("Nama"), namaperusahaan);
     }
 
     public void inputNPWP(String npwp) {
-        type(By.name("Npwp"), npwp);
+        typeWithBackSpace(By.name("Npwp"), npwp);
     }
 
     public void inputWebsite(String website) {
-        type(By.xpath("//input[@placeholder='https://..']"), website);
+        typeWithBackSpace(By.xpath("//input[@placeholder='https://..']"), website);
     }
 
     public void inputLogo(String filepath) {
@@ -27,7 +27,7 @@ public class InformasiPerusahaanForm extends BasePageObject {
     }
 
     public void inputAlamatPerusahaan(String alamatperusahaan) {
-        type(By.xpath("//textarea[@id='company']"), alamatperusahaan);
+        typeWithBackSpace(By.xpath("//textarea[@id='company']"), alamatperusahaan);
     }
 
     public void selectProvinsi(String provinsi) {
@@ -39,19 +39,19 @@ public class InformasiPerusahaanForm extends BasePageObject {
     }
 
     public void inputKodePos(String kodepos) {
-        type(By.xpath("//input[@id='pos']"), kodepos);
+        typeWithBackSpace(By.xpath("//input[@id='pos']"), kodepos);
     }
 
     public void inputNomorTelepon(String nomortelepon) {
-        type(By.xpath("//input[@id='phone']"), nomortelepon);
+        typeWithBackSpace(By.xpath("//input[@id='phone']"), nomortelepon);
     }
 
     public void inputEmailPerusahaan(String emailperusahaan) {
-        type(By.xpath("//input[@id='companyEmail']"), emailperusahaan);
+        typeWithBackSpace(By.xpath("//input[@id='companyEmail']"), emailperusahaan);
     }
 
     public void inputFax(String fax) {
-        type(By.xpath("//input[@name='fax']"), fax);
+        typeWithBackSpace(By.xpath("//input[@name='fax']"), fax);
     }
 
     public void clickSelanjutnya() {
